@@ -46,12 +46,14 @@ table {
 
 @font-face{
     font-family: klavikaBold;
-    src: url("fonts/Klavika-Bold.otf") format("opentype");
+     src: url("../fonts/Klavika-Bold.otf") format("opentype");
+   
 }
 
 @font-face{
     font-family: klavikaReg; 
     src: url("fonts/Klavika-Regular.otf") format ("opentype"); 
+    
 }
 
 body{
@@ -149,7 +151,7 @@ header li a:hover{
 .wrapper{
     max-width: 1100px; 
     margin: 0 auto; 
-    font-family: klavika, sans-serif; 
+    font-family: klavikaReg, sans-serif; 
 }
 
 .about{
@@ -477,12 +479,18 @@ social li a{
         height: auto; 
         margin-bottom: 4%; 
     }
+    h3{
+        font-size: 2em; 
+    }
     .socail li a{
         font-size: 60%; 
     }
     .footer-content{
         padding: 0%; 
     
+    }
+    .text-box p{
+        font-size: 1.2em; 
     }
 }
 
