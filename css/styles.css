@@ -46,13 +46,13 @@ table {
 
 @font-face{
     font-family: klavikaBold;
-     src: url("../soren.github.io/Klavika-Bold.otf") format("opentype");
+     src: url("/fonts/Klavika-Bold.otf") format("opentype");
    
 }
 
 @font-face{
     font-family: klavikaReg; 
-    src: url("fonts/Klavika-Regular.otf") format ("opentype"); 
+    src: url("/fonts/Klavika-Regular.otf") format ("opentype"); 
     
 }
 
