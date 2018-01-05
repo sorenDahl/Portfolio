@@ -1,0 +1,556 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*END CSS RESET */
+
+@font-face{
+    font-family: klavikaBold;
+    src: url("fonts/Klavika-Bold.otf") format("opentype");
+}
+
+@font-face{
+    font-family: klavikaReg; 
+    src: url("fonts/Klavika-Regular.otf") format ("opentype"); 
+}
+
+body{
+    background-color: #eeeeed; 
+}
+
+a{
+    -o-transition: 1s; 
+    -ms-transition: 1s; 
+    -moz-transition: 1s; 
+    -webkit-transition: 1s; 
+    transition: 1s; 
+    text-decoration: none; 
+}
+em{
+    font-style: oblique; 
+}
+
+strong{
+    font-style: bold; 
+}
+img{
+    width:100%; 
+}
+h1,h2,h3,h4,h5{
+    font-family: klavikaBold, Helvetica Neue, sans-serif; 
+    /*font-family: Helvetica Neue, sans-serif; */
+    font-style: normal; 
+}
+h3{
+    text-transform: capitalize; 
+    font-size: 1.7em; 
+    padding: 0 0 1% 0; 
+    color: #55556b; 
+    font-weight: 800; 
+}
+
+header{
+    /*background: linear-gradient(
+    rgba(230,230,230,1.0),
+    rgba(230,230,230,0.70)
+    ),
+        /*Bottom Image
+    url(images/mig.jpg); 
+    background-size: cover; 
+    background-position: center top; 
+    */
+    
+    width: 100%;
+    text-align: center; 
+    max-height: 550px;
+}
+
+
+.contact-items{
+    margin: 0 auto; 
+}
+.more-info{
+    display: none; 
+}
+
+header li{
+    display: inline; 
+    padding: 0 5%
+}
+header li a:hover{
+    opacity: 50%; 
+    /*display: inline-block; */
+}
+
+.intro{
+    max-width: 1100px;  
+    margin: 0 auto; 
+    padding: 12.5% 0; 
+}
+
+.intro h1{
+    font-size: 250%; 
+    font-weight: 100; 
+    text-align: center; 
+    color: #55556b; 
+    text-transform: uppercase; 
+    letter-spacing: 0.1em; 
+    line-height: 1.5em; 
+}
+.intro h2{
+        font-size: 100%; 
+    font-weight: 300; 
+    text-align: center; 
+    color: #55556b; 
+    text-transform: capitalize; 
+    letter-spacing: 0.04em; 
+}
+
+.wrapper{
+    max-width: 1100px; 
+    margin: 0 auto; 
+    font-family: klavika, sans-serif; 
+}
+
+.about{
+    padding: 4% 0; 
+}
+
+.about h3{
+    font-weight: 300; 
+}
+
+.about p{
+    font-family: klavikaReg, sans-serif; 
+    font-style: normal; 
+    font-weight: 200; 
+    line-height: 1.8; 
+    color: #222222; 
+    letter-spacing: .03em; 
+    font-size: 80%; 
+    padding: 2% 0; 
+}
+
+.about p a{
+    color: #e1ccc9; 
+    border-bottom: 2px solid; 
+}
+
+.me-header {
+    text-align: left; 
+    font-size: 2.1em; 
+}
+
+.me-header h3{
+    color: black; 
+}
+
+.work-header {
+    color: #3435ff; 
+    text-align: left; 
+    font-size: 2.1em; 
+}
+
+.work-header h3{
+    color: black; 
+}
+
+.skills-header {
+    color: #3435ff; 
+    text-align: left; 
+    font-size: 2.1em; 
+}
+
+.skills-header h3{
+    color: black; 
+}
+.work{
+    height: 359px;
+    padding: 5% 0; 
+}
+.work-first{
+    height: 359px;
+    padding: 2% 0 5% 0; 
+}
+
+
+.work-me{
+    height:359px; 
+    padding: 2% 0 15% 0; 
+}
+
+.work-last{
+    height: 359px;
+    padding: 4% 0 15% 0; 
+}
+
+
+.work h3{
+    padding: 0% 0% 2% 0%; 
+}
+.text-box{
+    float:left;  
+    text-align: left; 
+    width:550px; 
+    background-color: #fff; 
+    height: 100%; 
+}
+
+.text-box-content{
+    padding: 4% 4%; 
+}
+
+.text-box-content p{
+    line-height: 1.8; 
+    color: #55556b;
+    letter-spacing: 0.04em; 
+    font-size: 0.8em; 
+}
+.skills{
+    margin-top: 3%; 
+}
+.techniques{
+    padding: 2% 2%; 
+    text-align: center;
+    border: 1px solid #55556b;
+    text-decoration: none; 
+    font-weight: 100; 
+}
+
+.techniques li{ 
+    display: inline;
+    font-size: 75%; 
+    padding: 0 2%; 
+    color: #55556b; 
+}
+
+.button{
+    padding:2% 2%; 
+    border: 1px solid #55556b; 
+    letter-spacing: 0.3em; 
+    text-decoration: none; 
+    font-weight: 100; 
+    color: #55556b;
+    text-align: center; 
+    display: block; 
+    text-transform: uppercase; 
+    margin-top: 3%; 
+}
+
+.button:hover{
+    color: #66667a; 
+    background-color: #2ea322; 
+}
+
+.image-area{
+    width: 550px; 
+    height: 359px;
+    overflow: hidden; 
+}
+
+.left{
+    float:left; 
+}
+.right{
+    float:right; 
+}
+
+.contact{
+    width: 100%; 
+    height: 300px; 
+   /* background-color: gray; */
+    margin: 15% 0 0% 0; 
+    clear: both; 
+}
+
+.contactWrapper{
+    max-width: 1100px; 
+     margin: 0 auto; 
+}
+.contact-items{
+    max-width:1100px; 
+    margin: 0 auto; 
+
+    /*padding-top: 120px; */
+}
+
+.contactItemLeft{
+    float:left; 
+    width:50%; 
+}
+
+.contactItemRight{
+    float:right; 
+    width:50%; 
+}
+
+#captionLeft{
+    font-family: klavikaBold, sans-serif; 
+    text-align: center; 
+    display: block; 
+    padding-top: 20px;
+}
+
+#captionRight{
+    font-family: klavikaBold, sans-serif; 
+    text-align: center; 
+    display: block;
+    padding-top: 20px;
+}
+
+.contact img{
+    text-align: center; 
+    width: 100px; 
+}
+
+
+#mail{
+    float:left; 
+    padding-left: 30%; 
+    width:90px; 
+    /*padding-bottom: 13px; */
+    transition-duration: 0.3s; 
+}
+
+#linkedIn{
+    width:130px;  
+    transition-duration: 0.3s; 
+}
+
+#phone{
+    float: right; 
+    padding-right: 30%;
+    width: 90px;
+    transition-duration: 0.3s; 
+}
+
+.contact-content h4{
+    
+    text-transform: capitalize; 
+    font-size: 1.7em; 
+    color: #55556b; 
+    font-weight: 800; 
+     
+    padding: 0.3% 0; 
+    font-weight: 800; 
+    letter-spacing: 0.04em; 
+}
+
+.contact-content a{
+    color: #3465ef; 
+    text-decoration: none; 
+}
+
+.image-divider{
+    padding: 15% 0; 
+    background: url(
+    images/giphy.gif); 
+    background-size: cover; 
+    background-position: center top; 
+}
+
+
+
+footer{
+    background-color: #eeeeed; 
+    color: #fff; 
+    padding: 2% 0; 
+    width: 100%; 
+    clear: both; 
+    height: 10px; 
+}
+
+.footer-content{
+    max-width: 960px; 
+    padding: 0% 1% 0% 1%; 
+    margin: 0 auto; 
+    font-family: Helvetica Neue, sans-serif; 
+    font-style: normal; 
+    font-weight: 200; 
+    color: #ababab; 
+    line-height: 1.4; 
+    letter-spacing: 0.03em; 
+    font-size: 50%; 
+}
+
+
+
+.credit{
+    /*float:left;*/
+    text-align: center; 
+}
+
+.social{
+    float:right; 
+}
+
+social li{
+    display: inline; 
+}
+
+social li a{
+    color: #fff;
+    padding: 0.1em; 
+    font-size: 80%; 
+    font-weight: 300; 
+    
+}
+
+.social li a:hover{
+    color: #04351e; 
+} 
+
+@media only screen and (max-width: 1100px){
+    .wrapper{
+        padding: 0 4%; 
+    }
+    work{
+        padding: 4% 0; 
+    }
+    
+    .work-me .text-box{
+        margin-bottom: 15%
+    }
+    
+    .work-last .text-box{
+        margin-bottom: 15%; 
+    }
+    .image-area{
+        position:relative;
+        width:100%; 
+        /*float:left; 
+        width: 100%; 
+        height: auto; */
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 0px; 
+        height: 0; 
+    }
+    .image-area iframe{
+        position: absolute; 
+        top:0; 
+        left: 0; 
+        width:100%; 
+        height:100%; 
+    }
+    .text-box{
+        width: 100%; 
+        height: auto; 
+        margin-bottom: 4%; 
+    }
+    .socail li a{
+        font-size: 60%; 
+    }
+    .footer-content{
+        padding: 0%; 
+    
+    }
+}
+
+@media only screen and (max-width: 800px){
+    
+    .intro h1{
+        font-size: 80%; 
+        line-height: 1.1; 
+    }
+    .intro h2{
+        font-size: 60%; 
+        padding-top: 3%; 
+    }
+    .about p{
+        font-size: 50%; 
+        line-height: 2; 
+    }
+    
+    .contact img{
+    text-align: center; 
+    width: 60px; 
+}
+    footer{
+        height: 10px; 
+        line-height: 1.3em; 
+    }
+    
+    footer-content{
+        padding:2%; 
+        font-size: 14px; 
+    }
+    .social {
+        float:left; 
+    }
+    .social li a {
+        font-size: 1.3em; 
+    }
+    .contact-content{
+        font-size: 12px; 
+        line-height: 1.5; 
+    }
+    
+      .work-me .text-box{
+        margin-bottom: 15%
+    }
+    
+    .work-last .text-box{
+        margin-bottom: 15%; 
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
