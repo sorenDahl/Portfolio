@@ -442,7 +442,7 @@ social li a{
     color: #04351e; 
 } 
 
-@media only screen and (max-width: 1100px){
+@media only screen and (max-width: 1180px){
     .wrapper{
         padding: 0 4%; 
     }
@@ -481,6 +481,7 @@ social li a{
     }
     h3{
         font-size: 2em; 
+        font-weight: 400; 
     }
     .socail li a{
         font-size: 60%; 
