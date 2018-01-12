@@ -1,8 +1,9 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="css/styles.css">  
-        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="scripts/jquery-3.2.1.js"></script>
+        <script src="/scripts/responsiveslides.min.js"></script>
         <script src="scripts/myScript.js"></script>
     </head>
 <body>
@@ -30,13 +31,11 @@
         <section class="work-me">
             <div class="image-area left">
                 <img src="images/me.JPG" alt="A picture of me">
-                <!--<iframe width="100%" height="100%" src="https://www.youtube.com/embed/TuVOLyqg7v4?rel=0" frameborder="0" allowfullscreen></iframe>-->
-                <!--<img src="images/P4.png" alt="Some text..."/>-->
             </div>
             <div class ="text-box">
                 <div class="text-box-content">
                     <h3>Søren Dahl Poulsen</h3>
-                    <p>I'm a young developer and technician, with a broad field of interest. I've been studying Medialogy on Aalborg University, and have gained a broad spectrum of knowledge within the field of Human-Computer Interaction. I'm highly motivated and ambitious in the projects I'm involved in and always explore new ways to solve technical issues. I'm a creative thinker and enjoy being a part of novel projects with alternative solutions.</p>
+                    <p>I'm a young developer and technician, with a broad field of interest. I've been studying Medialogy on Aalborg University, and have gained a broad spectrum of knowledge within the field of Human-Computer Interaction. I'm highly motivated and ambitious in the projects I'm involved in and always explore new ways to solve technical issues. I've gained a lot of experience on user centered design solutions and have a good understanding of combining technology with UX.<br> I'm a creative thinker and enjoy being a part of novel projects with alternative solutions.</p>
                 </div>
             </div>
         </section>
@@ -49,7 +48,6 @@
         <section class="work-first">
             <div class="image-area right">
                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TuVOLyqg7v4?rel=0" frameborder="0" allowfullscreen></iframe>
-                <!--<img src="images/P4.png" alt="Some text..."/>-->
             </div>
             <div class ="text-box">
                 <div class="text-box-content">
@@ -92,13 +90,12 @@
                 
         <section class="work">
             <div class="image-area right">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/eSy6D3hCdrY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/eSy6D3hCdrY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
             </div>
             <div class ="text-box">
                 <div class="text-box-content">
                     <h3>Video game exploring darkness</h3>
                     <p>This game production was aimed at exploring how a completely dark environment can affect players frustration level. Based on the frustration level from each player between the levels, the amount of light was dynamically adjusted with an implemented algorithm. The simple game mechanics and features of the game made it possible to focus on the dark environment and its affect on frustration. </p>
-                  <!--  <a href="#" target="_blank" class="button">View Project</a>-->
                       <div class="skills">
                         <ul class="techniques">
                            <li>Unity</li>
@@ -109,21 +106,6 @@
             </div>
         </section>
 
-        
-        <!--<section class="work">
-            <div class="image-area right">
-               <video controls="controls" width="100%" height="100%" name="BLA BLA" src="images/Demens.mov"> </video>
-            </div>
-            <div class ="text-box">
-                <div class="text-box-content">
-                    <h3>Application for enhanced recollection among demented</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo corporis sunt repellendus est tempora nobis veritatis sit, ab blanditiis nostrum debitis id ducimus nulla quisquam soluta quod vero dolorem quo rerum, mollitia quidem eveniet. Necessitatibus, consequatur corporis. Reprehenderit explicabo ullam vero perspiciatis aspernatur dolorum ad iure assumenda unde hic reiciendis, eius animi, amet quisquam itaque at facilis tempore labore quia facere cupiditate impedit voluptatum quibusdam enim. Harum alias enim explicabo!</p>
-
-                </div>
-            </div>
-        </section>-->
-        
-        
         <section class="work">
             <div class="image-area left">
                 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ILw9VyiJsx8?rel=0" frameborder="0" allowfullscreen></iframe>
@@ -133,7 +115,6 @@
                     <h3>Game for album release</h3>
                     <p>This project stems from the urge to release and distribute and album in a new interesting way.
                     As a second album, the game invited fans and listeners into a virtual world build to immerse people into the thoughts on the album. The player were able to find and collect the songs in the sequence they appear on the record. This media proved to be a popular way of distributing music in and the merge of commercial music in a virtual world revealed the potential of it. The project was made by myself entirey and made in order to distribute my own bands' music.</p>
-                  <!--  <a href="#" target="_blank" class="button">View Project</a>-->
                       <div class="skills">
                         <ul class="techniques">
                            <li>Unity</li>
@@ -160,14 +141,38 @@
                         <li>Processing</li>
                     </ul>
                 </div>
-                    <!--<a href="#" target="_blank" class="button">View Project</a>-->
                 </div>
             </div>
         </section>
 
+              <section class="work">
+            <div class="image-area left">
+                <ul class ="rslides">
+                    <li><img src="images/midiController/1.jpg" alt="midi controller"></li>
+                    <li><img src="images/midiController/2.jpg" alt="midi controller"></li>
+                    <li><img src="images/midiController/3.jpg" alt="midi controller"></li>
+                </ul>
+                
+            </div>
+            <div class ="text-box">
+                <div class="text-box-content">
+                    <h3>Custom built midi controller</h3>
+                    <p> The midi controller was built for a fellow musician and friend, in order to be integrated in his live setup. The artist wanted to be able to interact more physically with his music for a more interesting and immersive visual appearance. The midi controller uses a infrared sensor to detect distance of objects above. The distance is translated into meaningful midi signals, which can be mapped to whatever the artist wants it to. 
+                    </p>
+                    <div class="skills">
+                    <ul class="techniques">
+                       <li>Arduino</li>
+                        <li>Midi</li>
+                        <li>Physical Interface</li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+      
        
          <section class="work-last">
-            <div class="image-area left">
+            <div class="image-area right">
                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/z8xaSBLf9J4?rel=0" frameborder="0" allowfullscreen></iframe>
             </div>
             <div class ="text-box">
@@ -181,7 +186,6 @@
                            <li>Recording</li>
                         </ul>
                     </div>
-                  <!--  <a href="#" target="_blank" class="button">View Project</a>-->
                 </div>
             </div>
         </section>
