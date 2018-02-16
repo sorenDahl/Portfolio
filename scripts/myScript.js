@@ -1,16 +1,15 @@
 $(document).ready(function(){
-    console.log(innerWidth);
+
     var w = innerWidth; 
     var is_mobile = false; 
     if(innerWidth < 1100){
-        console.log("This is a mobile device"); 
+        //console.log("This is a mobile device"); 
         is_mobile = true; 
     } else{
         is_mobile = false; 
-        console.log("This is a computer!"); 
+        //console.log("This is a computer!"); 
     }
-    
-    
+
     $(function() {
         $(".rslides").responsiveSlides({auto: true, pager: true, speed: 500, nav:true, prevText: "Previous", nextText: "Next"});
     });
@@ -37,19 +36,21 @@ $(document).ready(function(){
     function(){
         $('#captionRight').fadeOut(300);    
     });
-    
- });
+
     $(window).resize(function(){
         w=innerWidth; 
-        console.log(w); 
+        //console.log(w); 
         if(w > 1100){
             is_mobile = false; 
-            console.log("this is a computer after resizing"); 
+            //console.log("this is a computer after resizing"); 
             $(".hide").hide();
         }else
             {
             is_mobile = true; 
-            console.log("this is a mobile after resizing");
+            //console.log("this is a mobile after resizing");
             $(".hide").show();  
         }
     }); 
+ });
+
+

@@ -284,7 +284,35 @@ header li a:hover{
 
 
 .skills{
+    width: 100%; 
     margin-top: 3%; 
+}
+
+.skills-coloumns{
+    float:left; 
+    width: 50%; 
+    height:200px; 
+}
+
+.skills-coloumns p{
+    font-family: klavikaReg, sans-serif; 
+    color: #55556b;
+    font-size: 1.1em; 
+    font-weight: 700; 
+}
+
+
+#bar{
+    height: 30px; 
+    margin: 2% 2% 5% 0% ; 
+    background-color: #707070; 
+}
+
+#bar p{
+    text-align: center; 
+    padding-top:7.5; 
+    color: aliceblue;
+    
 }
 .techniques{
     padding: 2% 2%; 
@@ -441,6 +469,7 @@ footer{
     max-width: 960px; 
     padding: 0% 1% 0% 1%; 
     margin: 0 auto; 
+    margin-top: 10%; 
     font-family: Helvetica Neue, sans-serif; 
     font-style: normal; 
     font-weight: 200; 
