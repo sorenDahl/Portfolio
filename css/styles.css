@@ -306,6 +306,7 @@ header li a:hover{
     height: 30px; 
     margin: 2% 2% 5% 0% ; 
     background-color: #707070; 
+    -webkit-transition-duration: 1s;
 }
 
 #bar p{
