@@ -286,12 +286,14 @@ header li a:hover{
 .skills{
     width: 100%; 
     margin-top: 3%; 
+     -webkit-transition: 1s;
 }
 
 .skills-coloumns{
     float:left; 
     width: 50%; 
     height:200px; 
+     -webkit-transition: 1s;
 }
 
 .skills-coloumns p{
@@ -299,6 +301,7 @@ header li a:hover{
     color: #55556b;
     font-size: 1.1em; 
     font-weight: 700; 
+     -webkit-transition: 1s;
 }
 
 
@@ -306,13 +309,14 @@ header li a:hover{
     height: 30px; 
     margin: 2% 2% 5% 0% ; 
     background-color: #707070; 
-    -webkit-transition-duration: 1s;
+    -webkit-transition: 1s;
 }
 
 #bar p{
     text-align: center; 
     padding-top:7.5; 
     color: aliceblue;
+     -webkit-transition: 1s;
     
 }
 .techniques{
