@@ -286,6 +286,10 @@ header li a:hover{
     margin-top: 3%; 
 }
 
+#skillGif{
+    display: none; 
+}
+
 .skills-coloumns{
     float:left; 
     width: 50%; 
@@ -563,6 +567,9 @@ social li a{
     
     .skills-coloumns{
         display: none; 
+    }
+    #skillGif{
+        display: block; 
     }
 }
 
