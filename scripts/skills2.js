@@ -1,4 +1,4 @@
-window.onload = function(){  
+//window.onload = function(){  
     
     
         var elem = document.querySelectorAll("#bar");
@@ -75,4 +75,4 @@ window.onload = function(){
             }
         }
     });
-}; 
+//}; 
