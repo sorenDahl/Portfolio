@@ -14,15 +14,13 @@
                 this.speed = speed; 
             }
            Move(_id){
-                $(this.elem).animate({
-                    width: this.percent+'%'
-                },
+                $(this.elem).animate({width: this.percent+'%'},
                 {
                  duration:this.speed*100, 
                     step: function(now, fx){
                         $("#progress"+_id).text(parseInt(now)+'%'); 
                     }
-                });
+                }).css('-webkit-animation-duration:infinite');
            }
 
             reset(){
