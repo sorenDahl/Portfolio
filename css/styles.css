@@ -286,9 +286,9 @@ header li a:hover{
     margin-top: 3%; 
 }
 
-#skillGif{
+/*#skillGif{
     display: none; 
-}
+}*/
 
 .skills-coloumns{
     float:left; 
@@ -308,6 +308,7 @@ header li a:hover{
     height: 30px; 
     margin: 2% 2% 5% 0% ; 
     background-color: #707070; 
+    -webkit-animation-duration: infinite; 
 }
 
 #bar p{
@@ -559,7 +560,7 @@ social li a{
         font-size: 1.2em; 
     }
     
-     .skillsBottom{
+    /* .skillsBottom{
         height: 300px; 
         background-image: url("../images/skills.gif"); 
         background-size: cover; 
@@ -570,7 +571,7 @@ social li a{
     }
     #skillGif{
         display: block; 
-    }
+    }*/
 }
 
 @media only screen and (max-width: 800px){
@@ -611,8 +612,6 @@ social li a{
         font-size: 12px; 
         line-height: 1.5; 
     }
-    
-   
     
     .work-me .text-box{
         margin-bottom: 15%
