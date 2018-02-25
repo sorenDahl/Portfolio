@@ -2,8 +2,9 @@ $(document).ready(function(){
     
         var elem = document.querySelectorAll("#bar");
         var hasAnimated = false;
-        var bars = [8]; 
-        var percentages = [80,60,50,40,60,40,40,40]; 
+        var bars = [elem.length]; 
+    // Unity, C#, Java, JS, UX, Maya, HTML, CSS, Arduino, Pure Data
+        var percentages = [80,60,50,40,60,60,40,40,30,40]; 
       
 //---- CLASS FOR EACH BAR WITH FUNCTIONS FOR ANIMATING AND RESETTING ---------//     
         class bar{
@@ -35,7 +36,7 @@ $(document).ready(function(){
     
     
     //----- INSTANTIATE BARS ------ /// 
-    for(var i = 0; i < 8; i++){
+    for(var i = 0; i < 10 ; i++){
             var speed = Math.floor((Math.random()*22)+8); 
             bars[i] = new bar(elem[i], percentages[i], speed, i); 
         }
@@ -58,8 +59,6 @@ $(document).ready(function(){
     $(window).on('scroll', onScroll);
     
     function onScroll(){
-   // $(window).scroll(function() { 
-        //alert("Scrolling!"); 
         var isInView = false;  
 
         if(isScrolledIntoView($(document.getElementsByClassName("skills-coloumns"))) && !hasAnimated)
@@ -78,8 +77,8 @@ $(document).ready(function(){
             console.log("Not visible"); 
             hasAnimated = false;
 
-             for(var j = 0; j < bars.length; j++){
-               bars[j].reset(); 
+            for(var j = 0; j < bars.length; j++){
+                bars[j].reset(); 
             }
         }
     };

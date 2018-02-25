@@ -282,8 +282,9 @@ header li a:hover{
   }
 
 .skillsBottom{
-    width: 100%; 
+    width: 100%;
     margin-top: 3%; 
+    height: 500px; 
 }
 
 /*#skillGif{
@@ -293,7 +294,7 @@ header li a:hover{
 .skills-coloumns{
     float:left; 
     width: 50%; 
-    height:200px; 
+    height: 300px; 
 }
 
 .skills-coloumns p{
@@ -482,7 +483,7 @@ header li a:hover{
 footer{
     background-color: #eeeeed; 
     color: #fff; 
-    padding: 2% 0; 
+    padding: 6% 0 4% 0; 
     width: 100%; 
     clear: both; 
     height: 10px; 
@@ -492,7 +493,6 @@ footer{
     max-width: 960px; 
     padding: 0% 1% 0% 1%; 
     margin: 0 auto; 
-    margin-top: 10%; 
     font-family: Helvetica Neue, sans-serif; 
     font-style: normal; 
     font-weight: 200; 
