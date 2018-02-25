@@ -1,11 +1,11 @@
 $(document).ready(function(){
     
-    
         var elem = document.querySelectorAll("#bar");
         var hasAnimated = false;
         var bars = [8]; 
         var percentages = [80,60,50,40,60,40,40,40]; 
-        
+      
+//---- CLASS FOR EACH BAR WITH FUNCTIONS FOR ANIMATING AND RESETTING ---------//     
         class bar{
             constructor(_elem, percent, speed){
                 //var width = 1;
@@ -30,13 +30,18 @@ $(document).ready(function(){
                 //this.elem.innerHTML = this.width * 1 + '%';
             }
         }
+    // END OF BAR CLASS // 
     
-    // Create instances of bars and store in array. 
+    
+    
+    //----- INSTANTIATE BARS ------ /// 
     for(var i = 0; i < 8; i++){
             var speed = Math.floor((Math.random()*22)+8); 
             bars[i] = new bar(elem[i], percentages[i], speed, i); 
         }
 
+    
+    // ---------- CHECKING WHETHER THE BARS ARE IN VIEW BEFORE ANIMATING ------ // 
     function isScrolledIntoView(elem){
         var docViewTop = $("body").scrollTop();
         var docViewBottom = docViewTop + $("body").height();
