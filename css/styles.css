@@ -284,7 +284,7 @@ header li a:hover{
 .skillsBottom{
     width: 100%;
     margin-top: 3%; 
-    height: 500px; 
+    height: 400px; 
 }
 
 /*#skillGif{
@@ -294,12 +294,13 @@ header li a:hover{
 .skills-coloumns{
     float:left; 
     width: 50%; 
-    height: 300px; 
+    height: 100%; 
 }
 
 .skills-coloumns p{
     font-family: klavikaReg, sans-serif; 
-    color: #55556b;
+    /*color: #55556b;*/
+    color: black
     font-size: 1.1em; 
     font-weight: 700; 
 }
@@ -307,15 +308,16 @@ header li a:hover{
 
 #bar{
     height: 30px; 
-    margin: 2% 2% 5% 0% ; 
-    background-color: #707070; 
-    -webkit-animation-duration: infinite; 
+    margin: 1% 2% 5% 0% ; 
+    /*background-color: #707070; */
+    background-color: #55556b;
+    /*-webkit-animation-duration: infinite; */
 }
 
 #bar p{
     text-align: center; 
     padding-top:7.5; 
-    color: aliceblue;
+    color: white;
 }
 .techniques{
     padding: 2% 2%; 
