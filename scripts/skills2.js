@@ -53,9 +53,13 @@ $(document).ready(function(){
         var isInView = (docViewTop+windowHeight >= elemTop); 
         return isInView
     }  
-
-    $(window).scroll(function() { 
-        alert("Scrolling!"); 
+    
+    $(document.body).on('touchmove', onScroll); // for mobile
+    $(window).on('scroll', onScroll);
+    
+    function onScroll(){
+   // $(window).scroll(function() { 
+        //alert("Scrolling!"); 
         var isInView = false;  
 
         if(isScrolledIntoView($(document.getElementsByClassName("skills-coloumns"))) && !hasAnimated)
@@ -78,5 +82,5 @@ $(document).ready(function(){
                bars[j].reset(); 
             }
         }
-    });
+    };
 }); 
