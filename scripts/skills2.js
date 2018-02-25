@@ -44,8 +44,8 @@ $(document).ready(function(){
     
     // ---------- CHECKING WHETHER THE BARS ARE IN VIEW BEFORE ANIMATING ------ // 
     function isScrolledIntoView(elem){
-        var docViewTop = $("body").scrollTop();
-        var docViewBottom = docViewTop + $("body").height();
+        var docViewTop = $(window).scrollTop();
+        var docViewBottom = docViewTop + $(window).height();
         var elemTop = $(elem).offset().top;
         var elemBottom = elemTop + $(elem).height();
         var windowHeight = window.innerHeight; 
@@ -61,22 +61,22 @@ $(document).ready(function(){
     function onScroll(){
         var isInView = false;  
 
-        if(isScrolledIntoView($(document.getElementsByClassName("skills-coloumns"))) && !hasAnimated)
+        if(isScrolledIntoView($(document.body.getElementsByClassName("skills-coloumns"))) && !hasAnimated)
         {
             console.log("Is in view");
             for(var i = 0; i < bars.length; i++){
                 bars[i].Move(i); 
             }
-            hasAnimated = true;
+           hasAnimated = true;
 
-        }else if(isScrolledIntoView($(document.getElementsByClassName("skills-coloumns"))) && hasAnimated){
+        }
+        else if(isScrolledIntoView($(document.body.getElementsByClassName("skills-coloumns"))) && hasAnimated){
             return; 
         }
         
         else {
             console.log("Not visible"); 
             hasAnimated = false;
-
             for(var j = 0; j < bars.length; j++){
                 bars[j].reset(); 
             }
