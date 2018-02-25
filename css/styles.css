@@ -372,12 +372,11 @@ header li a:hover{
 
 .contactWrapper{
     max-width: 1100px; 
-     margin: 0 auto; 
+    margin: 0 auto; 
 }
 .contact-items{
     max-width:1100px; 
     margin: 0 auto; 
-
     /*padding-top: 120px; */
 }
 
@@ -388,21 +387,43 @@ header li a:hover{
 
 .contactItemRight{
     float:right; 
-    width:50%; 
+    width:50%;
 }
 
 #captionLeft{
+    opacity: 0; 
+    display: block; 
     font-family: klavikaBold, sans-serif; 
     text-align: center; 
-    display: block; 
     padding-top: 20px;
+    -o-transition: 1s; 
+    -ms-transition: 1s; 
+    -moz-transition: 1s; 
+    -webkit-transition: 1s; 
+    transition: 1s; 
+    
 }
 
 #captionRight{
+    opacity: 0; 
+    display: block; 
     font-family: klavikaBold, sans-serif; 
     text-align: center; 
-    display: block;
     padding-top: 20px;
+    -o-transition: 1s; 
+    -ms-transition: 1s; 
+    -moz-transition: 1s; 
+    -webkit-transition: 1s; 
+    transition: 1s; 
+    
+}
+
+#imgLeft:hover + #captionLeft{
+    opacity: 1; 
+}
+
+#imgRight:hover + #captionRight{
+    opacity: 1; 
 }
 
 .contact img{
@@ -559,6 +580,13 @@ social li a{
     .text-box p{
         font-size: 1.2em; 
     }
+
+    #captionLeft{
+     opacity: 1;    
+    }
+    #captionRight{
+     opacity: 1;    
+    }
     
     /* .skillsBottom{
         height: 300px; 
@@ -589,10 +617,7 @@ social li a{
         line-height: 2; 
     }
     
-    .contact img{
-    text-align: center; 
-    width: 60px; 
-}
+    
     footer{
         height: 10px; 
         line-height: 1.3em; 
@@ -619,6 +644,10 @@ social li a{
     
     .work-last .text-box{
         margin-bottom: 15%; 
+    }
+    .contact img{
+        text-align: center; 
+        width: 60px; 
     }
 
 
