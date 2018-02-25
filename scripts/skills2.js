@@ -55,6 +55,7 @@ $(document).ready(function(){
     }  
 
     $(window).scroll(function() { 
+        alert("Scrolling!"); 
         var isInView = false;  
 
         if(isScrolledIntoView($(document.getElementsByClassName("skills-coloumns"))) && !hasAnimated)
