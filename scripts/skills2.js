@@ -1,4 +1,4 @@
-//window.onload = function(){  
+$(document).ready(function(){
     
     
         var elem = document.querySelectorAll("#bar");
@@ -73,4 +73,4 @@
             }
         }
     });
-//}; 
+}); 
