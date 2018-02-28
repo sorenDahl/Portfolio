@@ -14,6 +14,7 @@ $(document).ready(function(){
         $(".rslides").responsiveSlides({auto: true, pager: true, speed: 500, nav:true, prevText: "Previous", nextText: "Next"});
     });
     
+    /*
     // Object with 'hide' class tag are Initially hidden 
     if(is_mobile == true){
         $(".hide").show();
@@ -51,6 +52,7 @@ $(document).ready(function(){
             $(".hide").show();  
         }
     }); 
+    */
  });
 
 
