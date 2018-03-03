@@ -61,9 +61,8 @@ $(document).ready(function(){
         return isInView
     }  
     
-    //$(document.body).on('touchmove', onScroll); // for mobile
-    
-    $(document.body).bind('touchstart touchend touchcancel touchleave touchmove', onScroll); 
+   // $(document.body).on('touchmove', onScroll); // for mobile
+    $(document.body).bind('touchstart touchend touchcancel touchleave touchmove', onScroll; 
     $(window).on('scroll', onScroll);
     
     function onScroll(){
