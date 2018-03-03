@@ -5,6 +5,8 @@ $(document).ready(function(){
         var bars = [elem.length]; 
     // Unity, C#, Java, JS, UX, Maya, HTML, CSS, Arduino, Pure Data
         var percentages = [80,60,50,40,60,60,40,40,30,40]; 
+    
+    
       
 //---- CLASS FOR EACH BAR WITH FUNCTIONS FOR ANIMATING AND RESETTING ---------//     
         class bar{
@@ -44,27 +46,32 @@ $(document).ready(function(){
     
     // ---------- CHECKING WHETHER THE BARS ARE IN VIEW BEFORE ANIMATING ------ // 
     function isScrolledIntoView(elem){
+        
+        var docY = window.pageYOffset; 
+        console.log(docY); 
         var docViewTop = $(this).scrollTop();
         var elemTop = $(elem).offset().top;
         var windowHeight = window.innerHeight; 
+        console.log(windowHeight); 
         // var elemBottom = elemTop + $(elem).height();
         //var docViewBottom = docViewTop + $(this).height();
         //var isInView = ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 
-        var isInView = (docViewTop+windowHeight >= elemTop); 
+        var isInView = (docViewTop+docY >= elemTop); 
         return isInView
     }  
     
-    $(document.body).on('touchmove', onScroll); // for mobile
+    //$(document.body).on('touchmove', onScroll); // for mobile
+    
+    $(document.body).bind('touchstart touchend touchcancel touchleave touchmove', onScroll); 
     $(window).on('scroll', onScroll);
     
     function onScroll(){
         var elem = $(document.body.getElementsByClassName("skills-coloumns"))
-        
-        var docViewTop = $('body').scrollTop();  
+        var docViewTop = $('body').scrollTop();
         var elemTop = $(elem).offset().top;
         var windowHeight = window.outerHeight;
-        console.log(windowHeight); 
+       // console.log(windowHeight); 
         var isInView = (docViewTop+windowHeight >= elemTop);  
         if(isInView && !hasAnimated){
             for(var i = 0; i < bars.length; i++){
@@ -76,7 +83,7 @@ $(document).ready(function(){
         }
         
         else {
-            console.log("Not visible"); 
+            //console.log("Not visible"); 
             hasAnimated = false;
             for(var j = 0; j < bars.length; j++){
                 bars[j].reset(); 
