@@ -79,16 +79,16 @@ $(document).ready(function(){
     $(window).on('scroll', onScroll);
     
     function onScroll(){
-        var elem = $(document.getElementsByClassName("skills-coloumns"))
+        //var elem = $(document.getElementsByClassName("skills-coloumns"))
         var skillsElem = document.getElementById("skillsBottom");
         var rect = skillsElem.getBoundingClientRect(); 
         
         console.log("Håber det virker..."); 
         
-        var docViewTop = $('body').scrollTop();
-        var elemTop = $(elem).offset().top;
-        var windowHeight = window.outerHeight;
-        var windowPageOffset = window.pageYOffset + windowHeight; 
+        //var docViewTop = $('body').scrollTop();
+        //var elemTop = $(elem).offset().top;
+        //var windowHeight = window.outerHeight;
+        //var windowPageOffset = window.pageYOffset + windowHeight; 
         
         console.log(rect.bottom); 
         var rectHeight = rect.bottom - rect.top; 
