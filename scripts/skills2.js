@@ -6,9 +6,22 @@ $(document).ready(function(){
     // Unity, C#, Java, JS, UX, Maya, HTML, CSS, Arduino, Pure Data
         var percentages = [80,60,50,40,60,60,40,40,30,40]; 
     
+//---- CLASS FOR EACH BAR WITH FUNCTIONS FOR ANIMATING AND RESETTING ---------//   
     
-      
-//---- CLASS FOR EACH BAR WITH FUNCTIONS FOR ANIMATING AND RESETTING ---------//     
+    function GetZoomFactor () {
+            var factor = 1;
+            if (document.body.getBoundingClientRect) {
+                    // rect is only in physical pixel size in IE before version 8 
+                var rect = document.body.getBoundingClientRect ();
+                var physicalW = rect.right - rect.left;
+                var logicalW = document.body.offsetWidth;
+                rect.top
+
+                    // the zoom level is always an integer percent value
+                factor = Math.round ((physicalW / logicalW) * 100) / 100; 
+            }
+            return factor;
+        }
         class bar{
             constructor(_elem, percent, speed){
                 //var width = 1;
@@ -46,18 +59,19 @@ $(document).ready(function(){
     
     // ---------- CHECKING WHETHER THE BARS ARE IN VIEW BEFORE ANIMATING ------ // 
     function isScrolledIntoView(elem){
-        
+        var rect = document.body.getBoundingClientRect ();
         var docY = window.pageYOffset; 
-        console.log(docY); 
+        //console.log(docY); 
         var docViewTop = $(this).scrollTop();
         var elemTop = $(elem).offset().top;
         var windowHeight = window.innerHeight; 
-        console.log(windowHeight); 
+       // console.log(windowHeight); 
         // var elemBottom = elemTop + $(elem).height();
         //var docViewBottom = docViewTop + $(this).height();
         //var isInView = ((elemBottom >= docViewTop) && (elemTop <= docViewBottom) && (elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 
-        var isInView = (docViewTop+docY >= elemTop); 
+        var isInView = (Math.abs(rect.top - rect.bottom) >= elemTop); 
+        //var isInView = (docViewTop+docY >= elemTop); 
         return isInView
     }  
     
@@ -65,18 +79,34 @@ $(document).ready(function(){
     $(window).on('scroll', onScroll);
     
     function onScroll(){
-        var elem = $(document.body.getElementsByClassName("skills-coloumns"))
+        var elem = $(document.getElementsByClassName("skills-coloumns"))
+        var skillsElem = document.getElementsByClassName("skills-coloumns");
+        var rect = skillsElem[0].getBoundingClientRect(); 
+        
+        
+        
         var docViewTop = $('body').scrollTop();
-        var elemTop = $(elem).offset().top;
+        var elemTop = $(elem[0]).offset().top;
         var windowHeight = window.outerHeight;
-       // console.log(windowHeight); 
-        var isInView = (docViewTop+windowHeight >= elemTop);  
+        var windowPageOffset = window.pageYOffset + windowHeight; 
+        var rectHeight = rect.bottom - rect.top; 
+        var rectSumPos = rect.bottom - rectHeight; 
+        
+        
+        
+        console.log("The rect bottom is: " + (rect.bottom-rectHeight));
+        console.log("window.innerHeight: " + (window.innerHeight)); 
+        
+        
+        
+        //var isInView = (docViewTop+windowHeight >= elemTop);  
+        var isInView = (window.innerHeight >= rectSumPos); 
         if(isInView && !hasAnimated){
             for(var i = 0; i < bars.length; i++){
                 bars[i].Move(i); 
             }
            hasAnimated = true;
-        }else if(docViewTop+windowHeight >= elemTop && hasAnimated){
+        }else if(isInView && hasAnimated){
             return; 
         }
         
