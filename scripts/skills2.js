@@ -80,8 +80,8 @@ $(document).ready(function(){
     
     function onScroll(){
         var elem = $(document.getElementsByClassName("skills-coloumns"))
-        var skillsElem = document.getElementsByClassName("skills-coloumns");
-        var rect = skillsElem[0].getBoundingClientRect(); 
+        var skillsElem = document.getElementById("skillsBottom");
+        var rect = skillsElem.getBoundingClientRect(); 
         
         
         
