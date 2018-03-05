@@ -83,24 +83,26 @@ $(document).ready(function(){
         var skillsElem = document.getElementById("skillsBottom");
         var rect = skillsElem.getBoundingClientRect(); 
         
-        
+        console.log("Håber det virker..."); 
         
         var docViewTop = $('body').scrollTop();
-        var elemTop = $(elem[0]).offset().top;
+        var elemTop = $(elem).offset().top;
         var windowHeight = window.outerHeight;
         var windowPageOffset = window.pageYOffset + windowHeight; 
+        
+        console.log(rect.bottom); 
         var rectHeight = rect.bottom - rect.top; 
         var rectSumPos = rect.bottom - rectHeight; 
         
         
         
-        console.log("The rect bottom is: " + (rect.bottom-rectHeight));
+       // console.log("The rect bottom is: " + (rect.bottom-rectHeight));
         console.log("window.innerHeight: " + (window.innerHeight)); 
         
         
         
         //var isInView = (docViewTop+windowHeight >= elemTop);  
-        var isInView = (window.innerHeight >= rectSumPos); 
+        var isInView = (window.innerHeight >= rect.bottom); 
         if(isInView && !hasAnimated){
             for(var i = 0; i < bars.length; i++){
                 bars[i].Move(i); 
