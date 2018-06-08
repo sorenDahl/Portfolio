@@ -2,8 +2,8 @@ $(document).ready(function(){
     
         var elem = document.querySelectorAll("#bar");
         var hasAnimated = false;
-        var bars = [elem.length]; 
-    // Unity, C#, Java, JS, UX, Maya, HTML, CSS, Arduino, Pure Data
+        var bars = [elem.length];
+    // Unity, C#, Java, JS, UX, Maya, HTML, CSS, Arduino, Pure Data, python ,AI
         var percentages = [80,60,50,40,60,60,40,40,30,40]; 
     
 //---- CLASS FOR EACH BAR WITH FUNCTIONS FOR ANIMATING AND RESETTING ---------//   
@@ -55,7 +55,6 @@ $(document).ready(function(){
             var speed = Math.floor((Math.random()*22)+8); 
             bars[i] = new bar(elem[i], percentages[i], speed, i); 
         }
-
     
     // ---------- CHECKING WHETHER THE BARS ARE IN VIEW BEFORE ANIMATING ------ // 
     function isScrolledIntoView(elem){
