@@ -3,11 +3,10 @@ $(document).ready(function(){
         var elem = document.querySelectorAll("#bar");
         var hasAnimated = false;
         var bars = [elem.length];
-    // Unity, C#, Java, JS, UX, Maya, HTML, CSS, Arduino, Pure Data, python ,AI
-        var percentages = [80,60,50,40,60,60,40,40,30,40]; 
+     // Unity, C#, Java, JS, UX, Maya, HTML, CSS, Arduino, Pure Data, python ,AI
+        var percentages = [80,60,50,40,60,60,40,40,30,40,30,30]; 
     
-//---- CLASS FOR EACH BAR WITH FUNCTIONS FOR ANIMATING AND RESETTING ---------//   
-    
+
     function GetZoomFactor () {
             var factor = 1;
             if (document.body.getBoundingClientRect) {
@@ -22,6 +21,7 @@ $(document).ready(function(){
             }
             return factor;
         }
+    //---- CLASS FOR EACH BAR WITH FUNCTIONS FOR ANIMATING AND RESETTING ---------//   
         class bar{
             constructor(_elem, percent, speed){
                 //var width = 1;
@@ -46,17 +46,19 @@ $(document).ready(function(){
                 //this.elem.innerHTML = this.width * 1 + '%';
             }
         }
-    // END OF BAR CLASS // 
+    // END OF BAR CLASS //
     
     
     
     //----- INSTANTIATE BARS ------ /// 
-    for(var i = 0; i < 10 ; i++){
-            var speed = Math.floor((Math.random()*22)+8); 
-            bars[i] = new bar(elem[i], percentages[i], speed, i); 
+    for(var i = 0; i < 12 ; i++){
+            var speed = Math.floor((Math.random()*10)+6); 
+            bars[i] = new bar(elem[i], percentages[i], speed); 
+        console.log(bars[i])
         }
-    
     // ---------- CHECKING WHETHER THE BARS ARE IN VIEW BEFORE ANIMATING ------ // 
+   
+/*
     function isScrolledIntoView(elem){
         var rect = document.body.getBoundingClientRect ();
         var docY = window.pageYOffset; 
@@ -72,7 +74,7 @@ $(document).ready(function(){
         var isInView = (Math.abs(rect.top - rect.bottom) >= elemTop); 
         //var isInView = (docViewTop+docY >= elemTop); 
         return isInView
-    }  
+    }*/
     
     $(document.body).on('touchmove', onScroll); // for mobile
     $(window).on('scroll', onScroll);
@@ -82,21 +84,19 @@ $(document).ready(function(){
         var skillsElem = document.getElementById("skillsBottom");
         var rect = skillsElem.getBoundingClientRect(); 
         
-        console.log("Håber det virker..."); 
-        
         //var docViewTop = $('body').scrollTop();
         //var elemTop = $(elem).offset().top;
         //var windowHeight = window.outerHeight;
         //var windowPageOffset = window.pageYOffset + windowHeight; 
         
-        console.log(rect.bottom); 
+       // console.log(rect.bottom); 
         var rectHeight = rect.bottom - rect.top; 
         var rectSumPos = rect.bottom - rectHeight; 
         
         
         
        // console.log("The rect bottom is: " + (rect.bottom-rectHeight));
-        console.log("window.innerHeight: " + (window.innerHeight)); 
+        //console.log("window.innerHeight: " + (window.innerHeight)); 
         
         
         
