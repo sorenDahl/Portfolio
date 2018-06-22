@@ -54,7 +54,7 @@ $(document).ready(function(){
     for(var i = 0; i < 12 ; i++){
             var speed = Math.floor((Math.random()*10)+6); 
             bars[i] = new bar(elem[i], percentages[i], speed); 
-        console.log(bars[i])
+        //console.log(bars[i])
         }
     // ---------- CHECKING WHETHER THE BARS ARE IN VIEW BEFORE ANIMATING ------ // 
    
