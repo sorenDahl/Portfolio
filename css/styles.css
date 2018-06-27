@@ -58,7 +58,7 @@ table {
 
 body{
     /*background-color: #eeeeed; */
-    background-color: #FFF5CB; 
+    background-color: #FFFFFF; 
 }
 
 a{
@@ -85,8 +85,9 @@ h1,h2,h3,h4,h5{
     font-style: normal; 
 }
 h3{
-    text-transform: capitalize; 
-    font-size: 1.7em; 
+    text-transform: capitalize;
+    font-style: italic; 
+    font-size: 1em; 
     padding: 0 0 1% 0; 
     color: #55556b; 
     font-weight: 800; 
@@ -101,10 +102,26 @@ header{
 */
 
 #canvas{
-    width:100%;
-    height: 350px; 
-    margin: 0% 0 3% 0; 
+    /* Full height */
+    width: 100%; 
+    height: 100%; 
+    z-index: -1; 
+    /* Create the parallax scrolling effect */
+    /*background-attachment: fixed;*/
+    position: fixed; 
+    /*background-size: cover;*/
+    top: 0; 
+    left: 0; 
+    /*margin: 0px 0 0 0; */
 }
+
+/*
+#canvas{
+    
+    width:100%;
+    height: 100%; 
+    margin: 0% 0 3% 0; 
+}*/
 .contact{
     width: 100%; 
     height: 300px; 
@@ -173,22 +190,26 @@ header{
     width: 100px; 
 }
 .wrapper{
+    z-index: 1; 
     max-width: 1100px; 
     margin: 0 auto; 
     font-family: klavikaReg, sans-serif; 
 }
 .meWrapper{
-    height: 450px
+    height: 450px; 
+    z-index: 1;
+    margin: 300px 0 0 0; 
 }
 .meWrapper h3{
-    font-size: 2.1em; 
-    color: black; 
+    font-size: 5em; 
+    color: #FFE600; 
 }
 
 
 .workWrapper h3{
-    font-size: 2.1em; 
-    color: black; 
+    padding: 35% 0 0 0; 
+    font-size: 5em; 
+    color: #FFE600; 
 }
 .workWrapper .work h3{
     font-size: 1.5em; 
@@ -196,7 +217,7 @@ header{
 }
 .work{
     height: 359px;
-    padding: 2% 0; */
+    padding: 2% 0;
 }
 .work-first{
     height: 359px;
@@ -204,7 +225,7 @@ header{
 }
 .work-me{
     height:359px; 
-    /*padding: 2% 0 15% 0; */
+    /*padding: 0% 0 15% 0;*/
 }
 .work-last{
     height: 359px;
@@ -214,11 +235,13 @@ header{
 .work-first h3{
     font-size: 1.5em; 
     color: #55556b; 
+    padding: 0 0 1% 0; 
 }
 
 .work-last h3{
     font-size: 1.5em; 
     color: #55556b; 
+    padding: 0 0 1% 0; 
 }
 .work h3{
     padding: 0% 0% 2% 0%; 
@@ -228,7 +251,8 @@ header{
     text-align: left; 
     width:550px; 
     /*background-color: #fff; */
-    background-color: #FFFAE4; 
+    background-color: #A3D6DA;
+    opacity: 0.9; 
     height: 100%; 
 }
 .text-box-content{
@@ -243,30 +267,31 @@ header{
 
 .me-header {
     text-align: left; 
-    font-size: 2.1em; 
+    font-size: 3em; 
+    color: #FFE600;
 }
 
 .me-header h3{
-    color: black; 
+    color: #FFE600; 
 }
 
 .work-header {
     text-align: left;
-    font-size: 2.1em; 
+    color: #FFE600;
 }
 
 .work-header h3{
-    color: black; 
+    color: #FFE600; 
 }
 
 .skills-header {
-    color: #3435ff; 
+    color: #FFE600; 
     text-align: left; 
-    font-size: 2.1em; 
+    font-size: 3em; 
 }
 
 .skills-header h3{
-    color: black; 
+    color: #FFE600;
 }
 
 .skillsBottom{
@@ -277,8 +302,9 @@ header{
 
 #skillsBottom h3{
     text-align: left; 
-    font-size: 2.1em; 
-    color: black; 
+    font-size: 5em; 
+    margin-top: 35%; 
+    color: #FFE600;
 }
 
 .skills-coloumns{
@@ -289,7 +315,7 @@ header{
 .skills-coloumns p{
     font-family: klavikaReg, sans-serif; 
     /*color: #55556b;*/
-    color: black
+    color: #FFE600;
     font-size: 1.1em; 
     font-weight: 700; 
 }
@@ -299,7 +325,7 @@ header{
     height: 30px; 
     margin: 1% 2% 5% 0% ; 
     /*background-color: #707070; */
-    background-color: #55556b;
+    background-color: #F46CB0;
     /*-webkit-animation-duration: infinite; */
 }
 
@@ -338,12 +364,14 @@ header{
 
 
 footer{
-    background-color: #FFF5CB;
-    padding: 6% 0 4% 0; 
-    width: 100%; 
-    clear: both; 
-    height: 10px; 
+    background-color: #FFFFFF;
+    /*padding: 6% 0 4% 0;*/
+    width: 20%;
+    z-index: 1; 
+    clear:both; 
+    margin: 0 auto; 
 }
+
 .footer-content{
     max-width: 960px; 
     padding: 0% 1% 0% 1%; 
@@ -362,7 +390,7 @@ footer{
 }
 .credit{
     /*float:left;*/
-    text-align: center; 
+    text-align: center;
 }
 .rslides {
   position: relative;

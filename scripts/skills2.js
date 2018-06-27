@@ -4,7 +4,7 @@ $(document).ready(function(){
         var hasAnimated = false;
         var bars = [elem.length];
      // Unity, C#, Java, JS, UX, Maya, HTML, CSS, Arduino, Pure Data, python ,AI
-        var percentages = [80,60,50,40,60,60,40,40,30,40,30,30]; 
+        var percentages = [80,70,60,50,50,50,50,50,40,40,40,40]; 
     
 
     function GetZoomFactor () {
