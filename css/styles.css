@@ -92,14 +92,17 @@ h3{
     color: #55556b; 
     font-weight: 800; 
 }
-/*
+
 header{
     width: 100%;
-    max-width: 1100px; 
-    text-align: center; 
-    max-height: 550px;
+    text-align: center;
 }
-*/
+
+#bouncyBall{
+    margin: 0 auto; 
+    width: 60%; 
+    margin-bottom: -20%; 
+}
 
 #canvas{
     /* Full height */
@@ -543,6 +546,12 @@ footer{
     .contact img{
         text-align: center; 
         width: 60px; 
+    }
+    
+    #bouncyBall{
+        margin: 0 auto; 
+        width: 60%; 
+        margin-bottom: -40%; 
     }
 
 

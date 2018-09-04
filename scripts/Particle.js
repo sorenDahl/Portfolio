@@ -1,6 +1,3 @@
-// Daniel Shiffman
-// http://codingtra.in
-// http://patreon.com/codingtrain
 // Code for: https://youtu.be/BjoM9oKOAKY
 
 function Particle(color) {
@@ -11,15 +8,23 @@ function Particle(color) {
   this.maxspeed = 2;
   this.h = 0;
   var inc = 1; 
+  var _strokeW = 1.1; 
+  var threshHold = 0.08; 
 
   this.prevPos = this.pos.copy();
 
   this.update = function() {
-    this.vel.add(this.acc);
-    this.vel.limit(this.maxspeed);
-    this.pos.add(this.vel);
-    this.acc.mult(0);
-    this.maxspeed = lerp(this.maxspeed, 0, 0.005); 
+      if(this.maxspeed < threshHold)
+      {
+        return; 
+      }else
+      {
+        this.vel.add(this.acc);
+        this.vel.limit(this.maxspeed);
+        this.pos.add(this.vel);
+        this.acc.mult(0);
+        this.maxspeed = lerp(this.maxspeed, 0, 0.005); 
+      }
   }
 
   this.follow = function(vectors) {
@@ -35,11 +40,9 @@ function Particle(color) {
   }
 
   this.show = function() {
-    
     stroke(this.color);
     this.h = this.h + inc;
-      
-    strokeWeight(1.8);
+    strokeWeight(_strokeW);
     line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
     this.updatePrev();
   }
@@ -68,5 +71,4 @@ function Particle(color) {
     }
 
   }
-
 }
