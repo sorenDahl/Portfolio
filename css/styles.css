@@ -89,7 +89,7 @@ h3{
     font-style: italic; 
     font-size: 1em; 
     padding: 0 0 1% 0; 
-    color: #55556b; 
+    color: #1F52AD; 
     font-weight: 800; 
 }
 
@@ -216,7 +216,7 @@ header{
 }
 .workWrapper .work h3{
     font-size: 1.5em; 
-    color: #55556b; 
+    color: #1F52AD; 
 }
 .work{
     height: 359px;
@@ -237,13 +237,13 @@ header{
 
 .work-first h3{
     font-size: 1.5em; 
-    color: #55556b; 
+    color: #1F52AD; 
     padding: 0 0 1% 0; 
 }
 
 .work-last h3{
     font-size: 1.5em; 
-    color: #55556b; 
+    color: #1F52AD; 
     padding: 0 0 1% 0; 
 }
 .work h3{
@@ -263,7 +263,7 @@ header{
 }
 .text-box-content p{
     line-height: 1.8; 
-    color: #55556b;
+    color: #1F52AD;
     letter-spacing: 0.04em; 
     font-size: 0.8em; 
 }
@@ -406,7 +406,7 @@ footer{
 }
 
 .footer-content p{
-    color: #55556b; 
+    color: #1F52AD; 
 }
 .credit{
     /*float:left;*/
