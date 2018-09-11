@@ -12,6 +12,7 @@ var particles =  [];
 var flowfield; 
 var colorGrey;
 var colorBack;
+var particleColor;
 
 // F46CB0 - PINK
 // A3D6DA - Light Blue
@@ -24,7 +25,6 @@ function setup() {
     canvasHeight = canvasHolder.height;
     particleColor = color('#1F52AD'); 
     //colorBack = color('#FFFFFF'); 
-    //console.log(canvasHolder);
     createCanvas(canvasWidth, canvasHeight).parent('canvas');
     
     cols = floor(canvasWidth / scl); 

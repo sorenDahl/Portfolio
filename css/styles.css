@@ -194,7 +194,7 @@ header{
 }
 .wrapper{
     z-index: 1; 
-    max-width: 1100px; 
+    max-width: 1150px; 
     margin: 0 auto; 
     font-family: klavikaReg, sans-serif; 
 }
@@ -250,7 +250,7 @@ header{
     padding: 0% 0% 2% 0%; 
 }
 .text-box{
-    float:left;  
+    float:right;
     text-align: left; 
     width:550px; 
     /*background-color: #fff; */
@@ -359,10 +359,27 @@ header{
 }
 
 .left{
-    float:left; 
+    float:left;
 }
 .right{
     float:right; 
+}
+
+
+.left #line{
+    width: 0px;
+    margin-left: 573.5px; 
+    height: 358px; 
+    position: absolute; 
+    border: 3px solid #FFE600;
+}
+
+.right #line{
+    width: 0px;
+    margin-left: -25.5px; 
+    height: 358px; 
+    position: absolute; 
+    border: 3px solid #FFE600; 
 }
 
 
@@ -464,6 +481,14 @@ footer{
         height: auto; 
         margin-bottom: 10%; 
     }
+    
+    .left #line{
+        display: none; 
+    }
+
+    .right #line{
+        display: none; 
+    }
     h3{
         font-size: 2em; 
         font-weight: 400; 
@@ -485,6 +510,16 @@ footer{
     #captionRight{
      opacity: 1;    
     }
+    
+    #bar{
+        height: 15px; 
+    }
+    
+    #bar p{
+    font-size: 0.5em; 
+    padding-top:4.5; 
+    }
+    
     
     /* .skillsBottom{
         height: 300px; 
