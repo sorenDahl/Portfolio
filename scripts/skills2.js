@@ -21,16 +21,16 @@ $(document).ready(function(){
             }
             return factor;
         }
-    //---- CLASS FOR EACH BAR WITH FUNCTIONS FOR ANIMATING AND RESETTING ---------//   
-        class bar{
-            constructor(_elem, percent, speed){
-                //var width = 1;
-                this.elem = _elem; 
-                this.percent = percent; 
-                this.speed = speed; 
-            }
-           Move(_id){
-                $(this.elem).animate({width: this.percent+'%'},
+    
+    // ---- Bar Class ------ // 
+    function Bar(elem,percent,speed){
+        this.elem = elem; 
+        this.percent = percent; 
+        this.speed = speed; 
+        
+        
+        this.Move = function(_id){
+            $(this.elem).animate({width: this.percent+'%'},
                 {
                  duration:this.speed*100, 
                     step: function(now, fx){
@@ -38,24 +38,25 @@ $(document).ready(function(){
                     }
                 }).css('-webkit-animation-duration:infinite');
            }
-
-            reset(){
-                this.width = 1; 
-                this.elem.style.width = 1 + '%'; 
-                $("#progress").text(parseInt(1)+'%');
-                //this.elem.innerHTML = this.width * 1 + '%';
-            }
-        }
-    // END OF BAR CLASS //
+        
+        this.Reset = function(){
+            this.width = 1; 
+            this.elem.style.width = 1 + '%'; 
+            $("#progress").text(parseInt(1)+'%');
+            //this.elem.innerHTML = this.width * 1 + '%';
+        } 
+    }
     
     
     
     //----- INSTANTIATE BARS ------ /// 
     for(var i = 0; i < 12 ; i++){
             var speed = Math.floor((Math.random()*10)+6); 
-            bars[i] = new bar(elem[i], percentages[i], speed); 
+            bars[i] = new Bar(elem[i], percentages[i], speed); 
         //console.log(bars[i])
         }
+    
+    
     // ---------- CHECKING WHETHER THE BARS ARE IN VIEW BEFORE ANIMATING ------ // 
    
 /*
@@ -115,7 +116,7 @@ $(document).ready(function(){
             //console.log("Not visible"); 
             hasAnimated = false;
             for(var j = 0; j < bars.length; j++){
-                bars[j].reset(); 
+                bars[j].Reset(); 
             }
         }
     };
