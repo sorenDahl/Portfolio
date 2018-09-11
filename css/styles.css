@@ -220,19 +220,24 @@ header{
 }
 .work{
     height: 359px;
-    padding: 2% 0;
+    padding: 5% 0;
 }
 .work-first{
     height: 359px;
-    padding: 0% 0 2% 0; 
+    padding: 0% 0 5% 0; 
 }
 .work-me{
     height:359px; 
     /*padding: 0% 0 15% 0;*/
 }
+
+.work-me h3{
+    font-size: 1.5em; 
+    color: #1F52AD; 
+}
 .work-last{
     height: 359px;
-    padding: 2% 0 2% 0;  
+    padding: 5% 0 5% 0;  
 }
 
 .work-first h3{
