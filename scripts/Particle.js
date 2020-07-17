@@ -4,7 +4,7 @@ function Particle(color) {
   this.pos = createVector(random(width), random(height));
   this.vel = createVector(0, 0);
   this.acc = createVector(0, 0);
-  this.color = color; 
+  this.color = color;
   this.maxspeed = 2;
   this.h = 0;
   var inc = 1; 
@@ -40,7 +40,7 @@ function Particle(color) {
   }
 
   this.show = function() {
-    stroke(this.color);
+    stroke('#1F52AD');
     this.h = this.h + inc;
     strokeWeight(_strokeW);
     line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);

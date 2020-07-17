@@ -76,7 +76,7 @@ em{
 strong{
     font-style: bold; 
 }
-img{
+#imgMe{
     height:100%; 
 }
 h1,h2,h3,h4,h5{
@@ -184,7 +184,7 @@ header{
 
 
 .workWrapper h3{
-    padding: 35% 0 0 0; 
+    padding: 25% 0 0 0; 
     font-size: 5em; 
     color: #FFE600; 
 }
@@ -426,6 +426,14 @@ footer{
     .wrapper{
         padding: 0 8%; 
     }
+
+    
+    #imgMe{
+       width:100%;
+       position: absolute;
+    }
+    
+
     work{
         padding: 10% 0; 
     }
