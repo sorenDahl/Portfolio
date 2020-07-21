@@ -71,4 +71,7 @@ function Particle(color) {
       this.updatePrev();
     }
   }
+  this.delete = function(){
+    delete(this);
+  }
 }

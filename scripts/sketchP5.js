@@ -65,18 +65,38 @@ function draw(){
     }
 }
 
+
 window.onresize = function(){
-    console.log("Resize!!");
-    canvasWidth = window.width;
-    canvasHeight = window.height;
-    cols = floor(canvasWidth / scl); 
-    rows = floor(canvasHeight / scl); 
-    
-    flowfield = new Array(cols*rows); 
-    for(var i = 0; i < 100; i++){
-        particles[i] = new Particle(colorGrey);
-    }
-    for(var i = 100; i < 500; i++){
-        particles[i] = new Particle(colorBack);
+    if(window.width > 1000)
+    {
+        console.log("Resize");
+        canvasWidth = window.width;
+        canvasHeight = window.height;
+        cols = Math.floor(canvasWidth / scl); 
+        rows = Math.floor(canvasHeight / scl); 
+        flowfield = new Array(cols*rows); 
+
+        
+        /*
+        for(var i = 0; i < particles.length; i++){
+            console.log("deleting particle: ");
+            particles[i].push;
+            particles[i].delete();
+        }
+
+        for(var i = 0; i < 70; i++){
+            particles[i] = new Particle(particleColor);
+        } 
+        */
+        
+
+        /*
+        for(var i = 0; i < 100; i++){
+            particles[i] = new Particle(colorGrey);
+        }
+        for(var i = 100; i < 500; i++){
+            particles[i] = new Particle(colorBack);
+        }
+        */
     }
 }
