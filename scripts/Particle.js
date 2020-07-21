@@ -8,7 +8,7 @@ function Particle(color) {
   this.maxspeed = 2;
   this.h = 0;
   var inc = 1; 
-  var _strokeW = 1.1; 
+  this._strokeW = 1.1;
   var threshHold = 0.08; 
 
   this.prevPos = this.pos.copy();
@@ -23,7 +23,8 @@ function Particle(color) {
         this.vel.limit(this.maxspeed);
         this.pos.add(this.vel);
         this.acc.mult(0);
-        this.maxspeed = lerp(this.maxspeed, 0, 0.005); 
+        this.maxspeed = lerp(this.maxspeed, 0, 0.005);
+        
       }
   }
 
@@ -42,7 +43,7 @@ function Particle(color) {
   this.show = function() {
     stroke('#1F52AD');
     this.h = this.h + inc;
-    strokeWeight(_strokeW);
+    strokeWeight(this._strokeW);
     line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
     this.updatePrev();
   }
@@ -53,22 +54,21 @@ function Particle(color) {
   }
 
   this.edges = function() {
-    if (this.pos.x > window.width) {
+    if (this.pos.x >= window.width) {
       this.pos.x = 0;
       this.updatePrev();
     }
-    if (this.pos.x < 0) {
+    if (this.pos.x <= 0) {
       this.pos.x = window.width;
       this.updatePrev();
     }
-    if (this.pos.y > window.height) {
+    if (this.pos.y >= window.height) {
       this.pos.y = 0;
       this.updatePrev();
     }
-    if (this.pos.y < 0) {
+    if (this.pos.y <= 0) {
       this.pos.y = window.height;
       this.updatePrev();
     }
-
   }
 }

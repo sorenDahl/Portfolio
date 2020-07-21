@@ -20,28 +20,30 @@ $(document).ready(function(){
         }
     
     // ---- Bar Class ------ // 
-    function Bar(elem,percent,speed){
-        this.elem = elem; 
-        this.percent = percent; 
-        this.speed = speed; 
-        
-        
-        this.Move = function(_id){
-            $(this.elem).animate({width: this.percent+'%'},
-                {
-                 duration:this.speed*100, 
-                    step: function(now, fx){
-                        $("#progress"+_id).text(parseInt(now)+'%'); 
-                    }
-                }).css('-webkit-animation-duration:infinite');
-           }
-        
-        this.Reset = function(){
-            this.width = 1; 
-            this.elem.style.width = 1 + '%'; 
-            $("#progress").text(parseInt(1)+'%');
-            //this.elem.innerHTML = this.width * 1 + '%';
-        } 
+    class Bar {
+        constructor(elem, percent, speed) {
+            this.elem = elem;
+            this.percent = percent;
+            this.speed = speed;
+
+
+            this.Move = function (_id) {
+                $(this.elem).animate({ width: this.percent + '%' },
+                    {
+                        duration: this.speed * 100,
+                        step: function (now, fx) {
+                            $("#progress" + _id).text(parseInt(now) + '%');
+                        }
+                    }).css('-webkit-animation-duration:infinite');
+            };
+
+            this.Reset = function () {
+                this.width = 1;
+                this.elem.style.width = 1 + '%';
+                $("#progress").text(parseInt(1) + '%');
+                //this.elem.innerHTML = this.width * 1 + '%';
+            };
+        }
     }
     
     

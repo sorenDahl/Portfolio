@@ -1,6 +1,8 @@
  
-var inc = 0.01; 
-var scl = 14;
+var incX = 0.0178;
+var incY = 0.0135; 
+var incZ = 0.0001; 
+var scl = 20;
 var zoff = 0;  
 //var start = 0; 
 var rows; 
@@ -30,7 +32,7 @@ function setup() {
     cols = floor(canvasWidth / scl); 
     rows = floor(canvasHeight / scl); 
     
-    flowfield = new Array(cols*rows); 
+    flowfield = new Array(cols*rows);
     
     for(var i = 0; i < 70; i++){
         particles[i] = new Particle(particleColor);
@@ -47,15 +49,15 @@ function draw(){
             var v = p5.Vector.fromAngle(angle); 
             v.setMag(1); 
             flowfield[index] = v;  
-            xoff += inc;
+            xoff += incX;
             stroke(0); 
         }
-        yoff += inc; 
-        zoff += 0.0003; 
+        yoff += incY; 
+        zoff += incZ; 
     } 
     
     for(var i = 0; i < particles.length; i++){
-        particles[i].follow(flowfield);  
+        particles[i].follow(flowfield);
         particles[i].update(); 
         particles[i].edges(); 
         particles[i].show();
@@ -64,7 +66,7 @@ function draw(){
 }
 
 window.onresize = function(){
-    console.log("Resize!!"); 
+    console.log("Resize!!");
     canvasWidth = window.width;
     canvasHeight = window.height;
     cols = floor(canvasWidth / scl); 
